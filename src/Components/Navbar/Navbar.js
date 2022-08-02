@@ -1,9 +1,12 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
+import CartWidget from "../CartWidget/CartWidget";
+import './Navbar.css';
+
 
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav className="navbar sticky-top navbar-expand-xl navbar-dark bg-nav">
       <div className="container-fluid">
         <a className="navbar-brand" href="#">
           Ecommerce
@@ -36,7 +39,7 @@ const Navbar = () => {
               >
                 Productos
               </a>
-              <ul class="dropdown-menu bg-dark">
+              <ul class="dropdown-menu navbar-dark nav-item">
                 <li>
                   <a class="dropdown-item text-muted" href="#">
                     Gins
@@ -53,7 +56,9 @@ const Navbar = () => {
               <a className="nav-link">Contacto</a>
             </li>
           </ul>
+          <CartWidget className="nav-item"></CartWidget>
         </div>
+        
       </div>
     </nav>
   );
