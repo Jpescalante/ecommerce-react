@@ -29,9 +29,9 @@ const Navbar = () => {
                 Home
               </a>
             </li>
-            <li class="nav-item dropdown">
+            <li className="nav-item dropdown">
               <a
-                class="nav-link dropdown-toggle"
+                className="nav-link dropdown-toggle"
                 href="#"
                 role="button"
                 data-bs-toggle="dropdown"
@@ -39,14 +39,14 @@ const Navbar = () => {
               >
                 Productos
               </a>
-              <ul class="dropdown-menu navbar-dark nav-item">
+              <ul className="dropdown-menu navbar-dark nav-item">
                 <li>
-                  <a class="dropdown-item text-muted" href="#">
+                  <a className="dropdown-item text-muted" href="#">
                     Gins
                   </a>
                 </li>
                 <li>
-                  <a class="dropdown-item text-muted" href="#">
+                  <a className="dropdown-item text-muted" href="#">
                     Tonicas
                   </a>
                 </li>
