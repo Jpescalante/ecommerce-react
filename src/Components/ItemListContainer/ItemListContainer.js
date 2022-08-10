@@ -1,13 +1,26 @@
-import React from "react";
-import ItemCount from "../ItemCount/ItemCount";
-import "./ItemListContainer.css";
+import React, { useEffect, useState } from "react";
+import itemsData from "../../data/Data.js";
+import ItemList from "../ItemList/ItemList";
 
-function ItemListContainer(props) {
+function getProductos() {
+  return new Promise((resolve) => {
+    setTimeout(() => resolve(itemsData), 2000);
+  });
+}
+
+function ItemListContainer({ props }) {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    getProductos().then((respuesta) => {
+      setData(respuesta);
+    });
+  }, []);
+
   return (
-    <div className="main-container">
-      <h1 className="text-style"> {props.greeting}</h1>
-      <ItemCount initial={1} stock={5}></ItemCount>
-    </div>
+    <>
+      <ItemList title={"Ofertas del día"} data={data} />
+    </>
   );
 }
 

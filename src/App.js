@@ -1,14 +1,21 @@
-import "./App.css";
-import Navbar from "./Components/Navbar/Navbar";
+// Imports Css
 import "bootstrap";
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css"
+
+// Imports Components
+import NavBar from "./Components/navbar/NavBar";
 import ItemListContainer from "./Components/ItemListContainer/ItemListContainer";
-import ItemCount from "./Components/ItemCount/ItemCount";
+import PaymentListContainer from "./Components/paymentListContainer/PaymentListContainer";
 
 function App() {
   return (
     <div className="App">
-      <Navbar></Navbar>
-      <ItemListContainer greeting="Bienvenidos"></ItemListContainer>
+      <NavBar />
+
+      <ItemListContainer title="Ofertas del día" />
+
+      <PaymentListContainer title="Nuestros Medios de Pago" />
     </div>
   );
 }

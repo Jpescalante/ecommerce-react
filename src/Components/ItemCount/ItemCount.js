@@ -1,43 +1,45 @@
+import "./ItemCount.css";
 import React, { useState } from "react";
-import "bootstrap/dist/css/bootstrap.css";
+import Button from "../button/Button";
 
 function ItemCount(props) {
-  const [count, setCount] = useState(props.initial);
+  let [count, setCount] = useState(1);
 
-  const addCounterHandler = () => {
-    if (count < props.stock) {
+  function handleIncrement() {
+    if (count >= 1 && count < props.stock) {
       setCount(count + 1);
     }
-  };
+  }
 
-  const removeCounterHandler = () => {
-    if (count > props.initial) {
+  function handleDecrement() {
+    if (count > 1) {
       setCount(count - 1);
     }
-  };
-
-  const onAdd = () => {
-    if (count > props.stock) {
-      alert("No hay stock suficiente");
-    } else {
-      alert("Añadió {$count} item");
-    }
-  };
+  }
 
   return (
-    <div className="card text-center">
-      <div className="card-body">
-        <h5 className="card-title">Counter</h5>
-        <h3>Count: {count}</h3>
-        <button className="btn btn-primary" onClick={addCounterHandler}>
-          +
-        </button>
-        <button className="btn btn-primary" onClick={removeCounterHandler}>
-          -
-        </button>
-        <button className="btn btn-primary" onClick={onAdd}>
-          Agregar al carrito
-        </button>
+    <div className='container mt-1 d-flex align-items-center justify-content-center countContainer'>
+      <div className='row'>
+        <div className='col d-flex justify-content-center mb-1'>
+          <button
+            onClick={handleDecrement}
+            className='btn  btn-sm itemCount'
+            id='minus-btn'>
+            -
+          </button>
+        </div>
+        <div className='col textDiv d-flex justify-content-center'>
+          <p className='textCount text-center'>{count}</p>
+        </div>
+        <div className='col  d-flex justify-content-center mb-1'>
+          <button
+            onClick={handleIncrement}
+            className='btn  btn-sm itemCount '
+            id='plus-btn'>
+            +
+          </button>
+        </div>
+        <Button onAdd={props.onAdd} count={count} text={"Add to Cart"} />
       </div>
     </div>
   );
