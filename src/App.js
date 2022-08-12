@@ -7,6 +7,7 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import NavBar from "./Components/navbar/NavBar";
 import ItemListContainer from "./Components/ItemListContainer/ItemListContainer";
 import PaymentListContainer from "./Components/paymentListContainer/PaymentListContainer";
+import ItemDetailContainer from  "./Components/ItemDetailContainer/ItemDetailContainer";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <NavBar />
 
       <ItemListContainer title="Ofertas del día" />
+      <ItemDetailContainer></ItemDetailContainer>
 
       <PaymentListContainer title="Nuestros Medios de Pago" />
     </div>

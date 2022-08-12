@@ -1,21 +1,29 @@
 import React, { useEffect, useState } from "react";
-import dataJSON from "../../data/Data.js";
+// import dataJSON from "../../data/Data.js";
 import ItemDetail from "../ItemDetail/ItemDetail";
+import getProductos from "../../helpers/getProductos.js";
+import "./ItemDetailContainer.css"
+
+// Id de prueba para probar ItemDetailContainer y getProductos()
+let idPrueba= 15;
 
 function ItemDetailContainer({ itemid }) {
   const [data, setData] = useState({});
 
-  function getProduct() {
-    return new Promise((resolve, reject) => {
-      resolve(dataJSON[3]);
-    });
-  }
+  getProductos();
+  
+  // function getProduct() {
+  //   return new Promise((resolve, reject) => {
+  //     resolve(dataJSON[3]);
+  //   });
+  // }
 
   function onAdd(count) {
     console.log(`You Have added ${count} products`);
   }
+    
   useEffect(() => {
-    getProduct()
+    getProductos(idPrueba)
       .then((respuesta) => {
         setData(respuesta);
       })
@@ -25,7 +33,7 @@ function ItemDetailContainer({ itemid }) {
   return (
     <>
       <h4 className='text-center mt-5 flashTitle'></h4>
-      <div className='container mt-5 mb-5'>
+      <div className='containerDetail container mt-5 mb-5'>
         <div className='row d-flex justify-content-center'>
           <div className='col-md-10'>
             <div className='card-detail'>

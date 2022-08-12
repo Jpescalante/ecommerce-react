@@ -1,12 +1,8 @@
 import React, { useEffect, useState } from "react";
-import itemsData from "../../data/Data.js";
+import getProductos from "../../helpers/getProductos";
 import ItemList from "../ItemList/ItemList";
 
-function getProductos() {
-  return new Promise((resolve) => {
-    setTimeout(() => resolve(itemsData), 2000);
-  });
-}
+getProductos();
 
 function ItemListContainer({ props }) {
   const [data, setData] = useState([]);
