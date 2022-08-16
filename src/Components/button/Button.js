@@ -1,14 +1,14 @@
 import React from "react";
 import "../button/Button.css";
+import {toast} from "react-toastify";
 
-// import { ToastContainer, toast } from "react-toastify";
-// import "react-toastify/dist/ReactToastify.css";
 
 function Button(props) {
   return (
    
     <button
-      onClick={() => props.onAdd(props.count)}
+      onClick={
+        () => {props.onAdd(props.count);toast("Producto Agregado")}}
       className='btn btn-xs addToCart col-12 mt-auto align-self-start'>
       {props.text}
     </button>

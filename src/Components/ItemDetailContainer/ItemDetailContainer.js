@@ -1,23 +1,19 @@
 import React, { useEffect, useState } from "react";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import getProductos from "../../helpers/getProductos.js";
-import "./ItemDetailContainer.css"
-import { useParams} from 'react-router-dom';
+import "./ItemDetailContainer.css";
+import { useParams } from "react-router-dom";
 
-// Id de prueba para probar ItemDetailContainer y getProductos()
-// let idPrueba= 15;
-
-function ItemDetailContainer({ itemid }) {
-  const idPrueba= useParams().id;
+function ItemDetailContainer() {
+  const idUrl = Number(useParams().id);
   const [data, setData] = useState({});
 
-   
-    function onAdd(count) {
+  function onAdd(count) {
     console.log(`You Have added ${count} products`);
   }
-    
+
   useEffect(() => {
-    getProductos(idPrueba)
+    getProductos(idUrl)
       .then((respuesta) => {
         setData(respuesta);
       })
@@ -26,12 +22,12 @@ function ItemDetailContainer({ itemid }) {
 
   return (
     <>
-      <h4 className='text-center mt-5 flashTitle'></h4>
-      <div className='containerDetail container mt-5 mb-5'>
-        <div className='row d-flex justify-content-center'>
-          <div className='col-md-10'>
-            <div className='card-detail'>
-              <div className='row'>
+      <h4 className="text-center mt-5 flashTitle"></h4>
+      <div className="containerDetail container mt-5 mb-5">
+        <div className="row d-flex justify-content-center">
+          <div className="col-md-10">
+            <div className="card-detail">
+              <div className="row">
                 {
                   <ItemDetail
                     name={data.name}

@@ -2,6 +2,8 @@
 import "bootstrap";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { ToastContainer} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 // Imports Components
 import NavBar from "./Components/navbar/NavBar";
@@ -9,6 +11,7 @@ import ItemListContainer from "./Components/ItemListContainer/ItemListContainer"
 import PaymentListContainer from "./Components/paymentListContainer/PaymentListContainer";
 import ItemDetailContainer from "./Components/ItemDetailContainer/ItemDetailContainer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 
 function App() {
   return (
@@ -23,6 +26,7 @@ function App() {
 
         </Routes>
         <PaymentListContainer title="Nuestros Medios de Pago" />
+        <ToastContainer/>
       </BrowserRouter>
     </div>
   );

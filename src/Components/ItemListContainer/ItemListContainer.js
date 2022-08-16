@@ -3,7 +3,6 @@ import getProductos from "../../helpers/getProductos";
 import ItemList from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
 
-getProductos();
 
 function ItemListContainer({ props }) {
   const [data, setData] = useState([]);
@@ -24,7 +23,7 @@ function ItemListContainer({ props }) {
 
   return (
     <>
-      <ItemList title={"${idCategory}"} data={data} />
+      <ItemList data={data} />
     </>
   );
 }
