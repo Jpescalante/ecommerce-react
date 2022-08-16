@@ -1,24 +1,18 @@
 import React, { useEffect, useState } from "react";
-// import dataJSON from "../../data/Data.js";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import getProductos from "../../helpers/getProductos.js";
 import "./ItemDetailContainer.css"
+import { useParams} from 'react-router-dom';
 
 // Id de prueba para probar ItemDetailContainer y getProductos()
-let idPrueba= 15;
+// let idPrueba= 15;
 
 function ItemDetailContainer({ itemid }) {
+  const idPrueba= useParams().id;
   const [data, setData] = useState({});
 
-  getProductos();
-  
-  // function getProduct() {
-  //   return new Promise((resolve, reject) => {
-  //     resolve(dataJSON[3]);
-  //   });
-  // }
-
-  function onAdd(count) {
+   
+    function onAdd(count) {
     console.log(`You Have added ${count} products`);
   }
     

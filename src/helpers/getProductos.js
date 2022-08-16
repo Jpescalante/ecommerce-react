@@ -2,7 +2,7 @@ import "../data/Data.js";
 import itemsData from "../data/Data.js";
 
 function getProductos(id) {
-if (id!== undefined){
+if (id=== ""){
   let detail = itemsData.find (det => det.id === id);
   return new Promise((resolve) => {
     setTimeout(() => resolve(detail), 500);

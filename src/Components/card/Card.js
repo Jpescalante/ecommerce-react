@@ -1,8 +1,8 @@
 import ItemCount from "../ItemCount/ItemCount";
-
 import "./Card.css";
+import {Link} from 'react-router-dom';
 
-function Card({ name, price, image, category, description, stock, onAdd }) {
+function Card({ name, price, image, category, description, stock, onAdd, id }) {
   return (
     <>
       {/*<!-- Card --> */}
@@ -27,6 +27,7 @@ function Card({ name, price, image, category, description, stock, onAdd }) {
           </h5>
           <p>Category: {category}</p>
           <p>Stock: {stock}</p>
+          <Link to={`/detalle/${id}`}>Ver más</Link>
           {/*<!-- Rating --> */}
           <p>Description: {description}</p>
           {/* <!-- Card footer --> */}

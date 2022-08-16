@@ -1,21 +1,28 @@
-.navbar {
-    background: linear-gradient(black, rgba(14, 12, 12, 0.928));
-  }
+header {
+  background-color: #000000;
+  margin-bottom: 50px;
+  box-shadow: 0px 0px 15px 0px #000000;
+  font-family: "Bebas Neue", cursive;
+  font-size: 1.6rem;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+header nav div {
+  display: flex;
+  justify-content: flex-end;
+}
+header nav div .logo {
+  font-size: 2rem;
+  font-style: italic;
+}
+header nav div a {
+  margin: 20px;
+}
 
-  .nav-item :after {
-    background: none repeat scroll 0 0 transparent;
-    bottom: 0;
-    content: "";
-    display: block;
-    height: 2px;
-    left: 50%;
-    position: absolute;
-    background: #fff;
-    transition: width 0.3s ease 0s, left 0.3s ease 0s;
-    width: 0;
-    position: relative;
+@media only screen and (min-device-width: 1025px) and (max-device-width: 2600px) {
+  nav {
+    height: 100px;
   }
-  .nav-item :hover:after {
-    width: 100%;
-    left: 0;
-  }
+}

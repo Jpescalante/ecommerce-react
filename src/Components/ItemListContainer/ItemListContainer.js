@@ -1,21 +1,30 @@
 import React, { useEffect, useState } from "react";
 import getProductos from "../../helpers/getProductos";
 import ItemList from "../ItemList/ItemList";
+import { useParams } from "react-router-dom";
 
 getProductos();
 
 function ItemListContainer({ props }) {
   const [data, setData] = useState([]);
+  const idCategory = useParams().idCategory;
 
   useEffect(() => {
     getProductos().then((respuesta) => {
-      setData(respuesta);
+      let itemsFilter = respuesta.filter(
+        (element) => element.category === idCategory
+      );
+      if (idCategory === undefined) {
+        setData(respuesta);
+      } else {
+        setData(itemsFilter);
+      }
     });
-  }, []);
+  }, [idCategory]);
 
   return (
     <>
-      <ItemList title={"Ofertas del día"} data={data} />
+      <ItemList title={"${idCategory}"} data={data} />
     </>
   );
 }

@@ -1,67 +1,47 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import CartWidget from "../CartWidget/CartWidget";
-import './NavBar.css';
+import "./NavBar.css";
+import { NavLink } from "react-router-dom";
 
-
-const Navbar = () => {
+function NavBar(idCategory) {
   return (
-    <nav className="navbar sticky-top navbar-expand-xl navbar-dark bg-nav">
-      <div className="container-fluid">
-        <a className="navbar-brand" href="#">
-          Ecommerce
-        </a>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav">
-            <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
-                Home
-              </a>
-            </li>
-            <li className="nav-item dropdown">
-              <a
-                className="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Productos
-              </a>
-              <ul className="dropdown-menu navbar-dark nav-item">
-                <li>
-                  <a className="dropdown-item text-muted" href="#">
-                    Gins
-                  </a>
-                </li>
-                <li>
-                  <a className="dropdown-item text-muted" href="#">
-                    Tonicas
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link">Contacto</a>
-            </li>
-          </ul>
-          <CartWidget className="nav-item"></CartWidget>
-        </div>
-        
-      </div>
-    </nav>
-  );
-};
+    <header className="header mb-5">
+      <nav className="navbar navbar-expand-lg navbar-dark m-6">
+        <div className="container-fluid">
+        <NavLink className="navbar-brand logo nav-link active" aria-current="page"to={"/"}>
+            Mercado de Bebidas
+          </NavLink>
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
 
-export default Navbar;
+          <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div className="navbar-nav">
+         
+          <NavLink to={`category/Gin`} className="nav-link">
+            <li>Gin</li>
+          </NavLink>
+          <NavLink to={`category/Whisky`} className="nav-link">
+            <li>Whisky</li>
+          </NavLink>
+          <NavLink to={`category/Otras`} className="nav-link">
+            <li>Otros Destilados</li>
+          </NavLink>
+          <CartWidget />
+          </div>
+        </div>
+        </div>
+      </nav>
+    </header>
+  );
+}
+export default NavBar;
