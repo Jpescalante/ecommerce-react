@@ -1,13 +1,13 @@
 import React from "react";
 import Card from "../card/Card";
+import { toast } from "react-toastify";
+
 
 function ItemList({ data }) {
-  // const outlet = data.filter((obj) => {
-  //   return obj.outlet === true;
-  // });
 
-  function onAdd(count) {
-    console.log(`You have added' ${count} products`);
+
+  function addToCart(count) {
+    toast(`${count} producto(s) agregado(s)`);
   }
 
   return (
@@ -41,8 +41,7 @@ function ItemList({ data }) {
                 image={item.image}
                 stock={item.stock}
                 category={item.category}
-                description={item.description}
-                onAdd={onAdd}
+                                
               />
             ))
           }

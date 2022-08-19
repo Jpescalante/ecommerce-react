@@ -4,14 +4,12 @@ import getProductos from "../../helpers/getProductos.js";
 import "./ItemDetailContainer.css";
 import { useParams } from "react-router-dom";
 
+
 function ItemDetailContainer() {
   const idUrl = Number(useParams().id);
   const [data, setData] = useState({});
 
-  function onAdd(count) {
-    console.log(`You Have added ${count} products`);
-  }
-
+ 
   useEffect(() => {
     getProductos(idUrl)
       .then((respuesta) => {
@@ -37,7 +35,7 @@ function ItemDetailContainer() {
                     category={data.category}
                     stock={data.stock}
                     id={data.id}
-                    onAdd={onAdd}
+                    
                   />
                 }
               </div>

@@ -8,7 +8,7 @@ function Button(props) {
    
     <button
       onClick={
-        () => {props.onAdd(props.count);toast("Producto Agregado")}}
+        () => {props.onAdd(props.count)}}
       className='btn btn-xs addToCart col-12 mt-auto align-self-start'>
       {props.text}
     </button>

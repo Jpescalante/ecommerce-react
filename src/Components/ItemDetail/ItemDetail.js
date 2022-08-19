@@ -1,6 +1,7 @@
 import React from "react";
 import ItemCount from "../ItemCount/ItemCount";
 import "./ItemDetail.css";
+import { toast } from "react-toastify";
 
 function ItemDetail({
   name,
@@ -9,9 +10,12 @@ function ItemDetail({
   category,
   description,
   stock,
-  id,
-  onAdd,
+  id,  
 }) {
+
+  function addToCart(count) {
+    toast(`Agregaste ${count} ${name}`);
+  }
   return (
     <>
       <div className='col-md-6 d-flex align-items-center'>
@@ -99,7 +103,7 @@ function ItemDetail({
           </div>
 
           <div className='cart mt-4 align-items-center d-flex'>
-            <ItemCount onAdd={onAdd} stock={stock} />
+            <ItemCount onAdd={addToCart} stock={stock} />
           </div>
         </div>
       </div>

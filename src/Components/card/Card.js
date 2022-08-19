@@ -2,7 +2,7 @@ import ItemCount from "../ItemCount/ItemCount";
 import "./Card.css";
 import {Link} from 'react-router-dom';
 
-function Card({ name, price, image, category, description, stock, onAdd, id }) {
+function Card({ name, price, image, category, description, stock, addToCart, id }) {
   return (
     <>
       {/*<!-- Card --> */}
@@ -28,16 +28,15 @@ function Card({ name, price, image, category, description, stock, onAdd, id }) {
           <p>Category: {category}</p>
           <p>Stock: {stock}</p>
           <Link to={`/detalle/${id}`}>Ver más</Link>
-          {/*<!-- Rating --> */}
-          <p>Description: {description}</p>
+          
+          
           {/* <!-- Card footer --> */}
           <div className='card-footer pb-0 '>
             <div className='row mb-0 text-center'>
               <span className='float-left mb-1'>
                 Price: <strong>{price}$</strong>
               </span>
-
-              <ItemCount onAdd={onAdd} stock={stock} />
+              
             </div>
           </div>
         </div>
