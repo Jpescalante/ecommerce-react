@@ -1,6 +1,5 @@
 import React from "react";
 import "../button/Button.css";
-import {toast} from "react-toastify";
 
 
 function Button(props) {
