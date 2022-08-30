@@ -21,10 +21,10 @@ function CartItem({
         <h2 className="cartName">{name}</h2>
         <h3 className="cartAmount">Cantidad: {amount}</h3>
         <h3 className="cartSubtotal"> Subtotal: ${price}</h3>
-        <h3 className="cartStock">Stock Disponible: {stock}</h3>
-        <button onClick={() => subItemCart(id)}>-</button>
+        {/* <h3 className="cartStock">Stock Disponible: {stock}</h3> */}
+        {/* <button onClick={() => subItemCart(id)}>-</button>
         <p>{amount}</p>
-        <button onClick={() => plusItemCart(id)}>+</button>
+        <button onClick={() => plusItemCart(id)}>+</button> */}
         <FontAwesomeIcon
           className="cartDeleteItem"
           onClick={() => removeItemCart(id)}

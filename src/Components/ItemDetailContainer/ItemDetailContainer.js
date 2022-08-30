@@ -5,7 +5,7 @@ import "./ItemDetailContainer.css";
 import { useParams } from "react-router-dom";
 
 function ItemDetailContainer() {
-  const idUrl = Number(useParams().id);
+  const idUrl = useParams().id;
   const [data, setData] = useState({});
 
   useEffect(() => {
