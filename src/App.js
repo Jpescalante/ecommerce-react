@@ -16,10 +16,12 @@ import Checkout from "./Components/checkout/checkout";
 import Cart from "./Components/cart/Cart";
 import { CartProvider } from "./store/cartContext";
 
+
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
+     
         <CartProvider>
           <NavBar />
 

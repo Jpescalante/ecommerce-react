@@ -4,8 +4,10 @@ import {Link} from 'react-router-dom';
 function Card({ name, price, image, category, description, stock, addToCart, id }) {
   return (
     <>
+    
       {/*<!-- Card --> */}
       <div className='card f col-4'>
+      <Link className="link"to={`/detalle/${id}`}>
         {/*<!-- Card image --> */}
         <div className='view overlay'>
           <img src={image} className='img-fluid img-car' alt={description} />
@@ -15,18 +17,19 @@ function Card({ name, price, image, category, description, stock, addToCart, id 
         </div>
         {/*<!-- Card image --> */}
         {/* <!-- Card content --> */}
+        
         <div className='card-body'>
           {/*<!-- Category & Title --> */}
           <h5 className='card-title mb-1'>
             <strong>
-              <a href='' className='dark-grey-text'>
+              <p href='' className='dark-grey-text'>
                 {name}
-              </a>
+              </p>
             </strong>
           </h5>
           <p>Category: {category}</p>
           <p>Stock: {stock}</p>
-          <Link to={`/detalle/${id}`}>Ver más</Link>
+          
           
           
           {/* <!-- Card footer --> */}
@@ -39,6 +42,8 @@ function Card({ name, price, image, category, description, stock, addToCart, id 
             </div>
           </div>
         </div>
+        
+        </Link>
         {/* <!-- Card content --> */}
       </div>
       {/*<!-- Card --> */}

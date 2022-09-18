@@ -2,6 +2,7 @@
   height: 84.7vh;
   display: flex;
   align-items: center;
+  font-family: "Bebas Neue", cursive;
 }
 .checkoutContainer,
 .thankYouContainer {

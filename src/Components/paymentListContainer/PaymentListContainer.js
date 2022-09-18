@@ -1,10 +1,11 @@
 import React from "react";
 import paymentArray from "../../data/PaymentMethod.js";
 import Payment from "../payment/Payment";
+import "./PaymentListContainer.css"
 
 function PaymentListContainer(props) {
   return (
-    <>
+    <div className="containerPayment">
       <h4 className="text-center mt-5 paymentTitle">{props.title}</h4>
       <div div className="row payment-data-container container mt-3">
         <div className="row payment">
@@ -20,7 +21,7 @@ function PaymentListContainer(props) {
           ))}
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

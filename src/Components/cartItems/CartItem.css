@@ -1,6 +1,6 @@
 .itemCart-container {
   display: grid;
-  grid-template-columns: 30% 65%;
+  grid-template-columns: 35% 60%;
   background-color: rgba(18, 115, 172, 0.665);
   column-gap: 2rem;
   padding: 2rem;
@@ -18,9 +18,9 @@
 }
 
 .cartImg {
-  max-width: 100%;
+  max-width: 50%;
   border-radius: 0.6rem;
-  box-shadow: 7px 5px 14px -6px #ffffff84;
+  box-shadow: 7px 5px 14px -6px rgb(0, 0, 0);
 }
 
 .cartName {
@@ -41,4 +41,7 @@
 
 .cartDeleteItem:hover {
   color: #fb6161;
+}
+.emptyCartContainer {
+  font-family: "Bebas Neue", cursive;
 }

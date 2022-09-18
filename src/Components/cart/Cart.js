@@ -73,10 +73,7 @@ function Cart(id) {
         <section className="cartResume">
           <h1 className="titleResume">Resumen del Pedido</h1>
           <h3 className="resume">Cantidad de Productos: {totalAmount()}</h3>
-          <h3 className="resume">Subtotal: ${totalPrice()}</h3>
-          <h3 className="resume">IVA(21%): ${totalPrice() * 0.21}</h3>
-          <h3 className="resume">Envío: Gratuito</h3>
-          <h2 className="totalResume">Total: $ {totalPrice() * 1.21}</h2>
+          <h2 className="totalResume">Total: $ {totalPrice()}</h2>
           <div className="containerButtonsResume">
             <Link to={"/"}>
               <button className="cartResumeButtons">Seguir Comprando </button>
@@ -85,11 +82,6 @@ function Cart(id) {
               <button className="cartResumeButtons">Finalizar Compra </button>
             </Link>
           </div>
-          <img
-            className="paymentResume"
-            src="https://res.cloudinary.com/dveku4pvl/image/upload/v1661110744/mercadopago_logos1_rld5ya.jpg"
-            alt="Medios de Pago"
-          ></img>
         </section>
       </main>
     );
