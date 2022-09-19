@@ -3,10 +3,7 @@ import { useContext } from "react";
 import { cartContext } from "../../store/cartContext";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faCartArrowDown,
-  faFaceSadTear,
-} from "@fortawesome/free-solid-svg-icons";
+import { faCartArrowDown } from "@fortawesome/free-solid-svg-icons";
 
 import "./Cart.css";
 
@@ -35,7 +32,6 @@ function Cart(id) {
         <div className="emptyCartContainer">
           <div className="titleEmptyContainer">
             <h1>Carrito Vacío</h1>
-            <FontAwesomeIcon className="emptyCartFace" icon={faFaceSadTear} />
           </div>
           <span>
             <FontAwesomeIcon className="emptyCart" icon={faCartArrowDown} />
