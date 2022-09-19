@@ -1,4 +1,4 @@
-import CartItem from "../cartItems/CartItem";
+import CartItem from "../CartItems/CartItem";
 import { useContext } from "react";
 import { cartContext } from "../../store/cartContext";
 import { Link } from "react-router-dom";

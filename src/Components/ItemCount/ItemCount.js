@@ -1,6 +1,6 @@
 import "./ItemCount.css";
 import React, { useState } from "react";
-import Button from "../button/Button";
+import Button from "../Button/Button";
 
 function ItemCount(props) {
   let [count, setCount] = useState(1);

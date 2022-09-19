@@ -6,14 +6,14 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 // Imports Components
-import NavBar from "./Components/navbar/NavBar";
+import NavBar from "./Components/NavBar/NavBar";
 import ItemListContainer from "./Components/itemListContainer/ItemListContainer";
-import PaymentListContainer from "./Components/paymentListContainer/PaymentListContainer";
+import PaymentListContainer from "./Components/PaymentListContainer/PaymentListContainer";
 import ItemDetailContainer from "./Components/ItemDetailContainer/ItemDetailContainer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Checkout from "./Components/checkout/checkout";
+import Checkout from "./Components/Checkout/Checkout";
 
-import Cart from "./Components/cart/Cart";
+import Cart from "./Components/Cart/Cart";
 import { CartProvider } from "./store/cartContext";
 
 

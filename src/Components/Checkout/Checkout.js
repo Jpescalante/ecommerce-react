@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
 import firestoreDB from "../../services/firebase";
-import "./checkout.css";
+import "./Checkout.css";
 
 function Checkout() {
   const { cart, totalPrice, clearCart } = useContext(cartContext);

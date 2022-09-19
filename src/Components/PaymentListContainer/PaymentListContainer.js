@@ -1,6 +1,6 @@
 import React from "react";
-import paymentArray from "../../data/PaymentMethod.js";
-import Payment from "../payment/Payment";
+import paymentArray from "../../Data/PaymentMethod.js";
+import Payment from "../Payment/Payment";
 import "./PaymentListContainer.css"
 
 function PaymentListContainer(props) {

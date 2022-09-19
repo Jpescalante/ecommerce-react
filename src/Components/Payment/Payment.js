@@ -1,4 +1,4 @@
-import "../payment/Payment.css";
+import "./Payment.css";
 
 function Payment({ name, id, img, description }) {
   return (
